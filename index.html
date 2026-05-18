@@ -392,6 +392,76 @@
     }
     .manual-note strong { color: var(--gold); }
 
+    .support-submit-panel {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 0;
+      margin-top: 28px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(255,203,128,.28);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(145,195,74,.16), transparent 24rem),
+        linear-gradient(135deg, rgba(255,179,71,.12), rgba(255,255,255,.055));
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .support-submit-copy,
+    .support-form-card { padding: clamp(22px, 3vw, 34px); }
+    .support-submit-copy {
+      border-right: 1px solid rgba(255,203,128,.18);
+      display: grid;
+      align-content: center;
+    }
+    .support-submit-copy h3 { font-size: clamp(30px, 3.4vw, 46px); }
+    .support-submit-copy p { color: var(--muted); font-size: 17px; margin: 14px 0 0; }
+    .support-benefits { display: grid; gap: 9px; margin-top: 20px; }
+    .support-benefits span {
+      display: block;
+      padding: 11px 12px;
+      border-radius: 16px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,203,128,.18);
+      color: var(--cream);
+      font-weight: 900;
+      font-size: 14px;
+    }
+    .support-form-card { background: rgba(0,0,0,.18); }
+    .support-form { display: grid; gap: 12px; }
+    .form-field { display: grid; gap: 7px; }
+    .form-field label { color: var(--cream); font-weight: 1000; font-size: 14px; }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      border: 1px solid rgba(255,203,128,.26);
+      border-radius: 16px;
+      background: rgba(0,0,0,.28);
+      color: var(--text);
+      padding: 13px 14px;
+      outline: none;
+    }
+    .form-field textarea { min-height: 104px; resize: vertical; }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: rgba(255,232,200,.48); }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: rgba(255,209,102,.75);
+      box-shadow: 0 0 0 4px rgba(255,209,102,.12);
+    }
+    .form-field select option { background: #120603; color: #fff4e6; }
+    .form-small { color: var(--muted); font-size: 13px; margin: 0; }
+    .form-status {
+      min-height: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      margin: 0;
+    }
+    .form-status.success { color: #d7ff9a; }
+    .form-status.error { color: #ffd0c2; }
+
     .quick-links { padding: 18px 0 72px; }
     .icon-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
     .icon-card {
@@ -543,9 +613,10 @@
     @media (max-width: 980px) {
       .book-feature { grid-template-columns: 1fr; }
       .book-feature-cover { max-width: 280px; }
-      .hero-grid, .split, .leaderboard, .about-grid { grid-template-columns: 1fr; }
+      .hero-grid, .split, .leaderboard, .about-grid, .support-submit-panel { grid-template-columns: 1fr; }
       .icon-grid, .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
       .tool-grid, .cards-3 { grid-template-columns: 1fr; }
+      .support-submit-copy { border-right: 0; border-bottom: 1px solid rgba(255,203,128,.18); }
       .stat-band, .preview-pages { grid-template-columns: repeat(2, 1fr); }
       .numbers-head { grid-template-columns: 1fr; }
       .numbers-tag { width: fit-content; }
@@ -627,7 +698,7 @@
               <div class="menu-group featured">
                 <a class="menu-heading" href="#sponsors">Sponsor the Project</a>
                 <p class="menu-note">Join for free, show public support, or fund books that can be given away.</p>
-                <a class="menu-item" href="#join-free">Add your name for free to support page</a>
+                <a class="menu-item" href="#add-name">Add your name for free to support page</a>
                 <a class="menu-item" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/">12,000 Pixel Website</a>
                 <a class="menu-item" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#leaderboard">Leaderboard</a>
               </div>
@@ -641,8 +712,8 @@
               </div>
             </div>
             <div class="menu-actions">
-              <a class="btn btn-primary" href="#join-free">Join Free</a>
-              <a class="btn btn-secondary" href="#sponsors">Sponsor Free Books</a>
+              <a class="btn btn-primary" href="#add-name">Join Free</a>
+              <a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor Free Books</a>
               <a class="btn btn-secondary" href="#tools">Use Free Resources</a>
             </div>
           </div>
@@ -666,8 +737,8 @@
             <div class="purpose-card"><strong>4. Funds free books</strong><span>Paid sponsors help buy books that can be given away to football communities.</span></div>
           </div>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#join-free">Add Your Name Free</a>
-            <a class="btn btn-secondary" href="#sponsors">Sponsor Free Books</a>
+            <a class="btn btn-primary" href="#add-name">Add Your Name Free</a>
+            <a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor Free Books</a>
             <a class="btn btn-secondary" href="#tools">Open Free Resources</a>
           </div>
         </div>
@@ -700,7 +771,7 @@
 
     <section class="quick-links" aria-label="Quick links">
       <div class="wrap icon-grid">
-        <a class="icon-card" href="#join-free"><div><div class="icon">✅</div><h3>Join Free</h3><p>Add your name or business to show public support without paying anything.</p></div><b>Add your name →</b></a>
+        <a class="icon-card" href="#add-name"><div><div class="icon">✅</div><h3>Join Free</h3><p>Add your name or business to show public support without paying anything.</p></div><b>Add your name →</b></a>
         <a class="icon-card" href="#sponsors"><div><div class="icon">🏆</div><h3>Sponsor Books</h3><p>Help fund free books for players, parents, coaches, clubs, schools and academies.</p></div><b>Sponsor the mission →</b></a>
         <a class="icon-card" href="#tools"><div><div class="icon">🎁</div><h3>Free Resources</h3><p>Games, ebook and GPT support people can use or share immediately.</p></div><b>Open resources →</b></a>
         <a class="icon-card" href="https://cornelius-aurelius.github.io/colour-blindness-in-football-project/"><div><div class="icon">🔢</div><h3>12,000 Pixel Site</h3><p>Support the visual social-proof campaign to reveal the hidden 12.</p></div><b>View the pixel site →</b></a>
@@ -799,9 +870,53 @@
 
         <div class="manual-note"><strong>Important sponsor note:</strong> payments are taken through Stripe, but this website is updated manually by Cornelius. If you sponsor and your name, amount or message does not appear straight away, it simply means the public page has not been updated yet.</div>
 
+        <div class="support-submit-panel" id="add-name" aria-label="Send a supporter name or username to Cornelius">
+          <div class="support-submit-copy">
+            <div class="mini-title">Free public support</div>
+            <h3>Add your name or username for free.</h3>
+            <p>This is the lowest-effort way to join the project. No payment is needed. Send the name, username, club or business you want Cornelius to review and add to the public support page.</p>
+            <div class="support-benefits" aria-label="Why add your name">
+              <span>✅ Builds social proof so the project looks supported.</span>
+              <span>✅ Helps parents, coaches, clubs and sponsors see people care.</span>
+              <span>✅ Lets people support the mission even if they cannot sponsor yet.</span>
+            </div>
+          </div>
+          <div class="support-form-card">
+            <form class="support-form" id="supportNameForm" autocomplete="on">
+              <div class="form-field">
+                <label for="supporterName">Name, username, club or business to show publicly *</label>
+                <input id="supporterName" name="name_or_username" type="text" maxlength="90" required placeholder="Example: @yourusername, Your Club, Your Business" />
+              </div>
+              <div class="form-field">
+                <label for="supporterLink">Optional link, website or social handle</label>
+                <input id="supporterLink" name="link_or_social_handle" type="text" maxlength="160" placeholder="Example: Instagram handle, website or TikTok" />
+              </div>
+              <div class="form-field">
+                <label for="supporterType">How should Cornelius list you?</label>
+                <select id="supporterType" name="supporter_type">
+                  <option value="Person / username">Person / username</option>
+                  <option value="Football player">Football player</option>
+                  <option value="Parent">Parent</option>
+                  <option value="Coach">Coach</option>
+                  <option value="Club / team">Club / team</option>
+                  <option value="Business">Business</option>
+                  <option value="Anonymous supporter">Anonymous supporter</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="supporterMessage">Optional short message</label>
+                <textarea id="supporterMessage" name="optional_message" maxlength="500" placeholder="Example: I support making football clearer for colour-blind players."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit" id="supportFormButton">Email my name to Cornelius</button>
+              <p class="form-small">This opens the user’s email app with the message filled in. The project Gmail address is not printed anywhere on this page.</p>
+              <p class="form-status" id="supportFormStatus" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+
         <div class="cards-3" id="join-free" aria-label="Ways to join the project">
-          <div class="info-card"><span class="label">Join for free</span><h3>Add your name to the support page.</h3><p>Build social proof without spending money. This helps show parents, coaches, clubs and sponsors that people care about colour blindness in football.</p><div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Add Your Name Free</a></div></div>
-          <div class="info-card"><span class="label">Fund free books</span><h3>Sponsor the books we give away.</h3><p>Paid sponsors help buy copies of the book so more players, parents, coaches, clubs, schools and academies can receive practical awareness support.</p><div class="actions"><a class="btn btn-primary" href="#sponsors">Choose Sponsor Amount</a></div></div>
+          <div class="info-card"><span class="label">Join for free</span><h3>Add your name to the support page.</h3><p>Build social proof without spending money. This helps show parents, coaches, clubs and sponsors that people care about colour blindness in football.</p><div class="actions"><a class="btn btn-primary" href="#add-name">Email Your Name Free</a></div></div>
+          <div class="info-card"><span class="label">Fund free books</span><h3>Sponsor the books we give away.</h3><p>Paid sponsors help buy copies of the book so more players, parents, coaches, clubs, schools and academies can receive practical awareness support.</p><div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor the books we give away</a></div></div>
           <div class="info-card"><span class="label">Public proof</span><h3>Help the project look supported.</h3><p>The sponsor page, leaderboard and 12,000 pixel campaign are designed to make support visible so the mission feels real the moment someone lands on the site.</p><div class="actions"><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#leaderboard">Open Leaderboard</a></div></div>
         </div>
 
@@ -816,7 +931,7 @@
           <article class="sponsor-card"><div class="tier">Custom Sponsor</div><h3>Choose</h3><p>Choose your own amount in GBP. Fund one book, a team pack, a club pack or a bigger push.</p><a class="btn btn-primary" href="https://buy.stripe.com/00w4gs1FP5wo4dgeRGejK01">Custom Amount</a></article>
         </div>
 
-        <div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Main Sponsor Page</a><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#leaderboard">See Sponsor Leaderboard</a></div>
+        <div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor the books we give away</a><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#leaderboard">See Sponsor Leaderboard</a></div>
 
         <div class="leaderboard">
           <div class="panel"><div class="panel-inner"><div class="mini-title">Sponsor Leaderboard</div><h3>Top mission supporters</h3><p class="muted">Add sponsor names, businesses, clubs or anonymous entries here as people support the mission.</p><div class="rank-list"><div class="rank"><div class="rank-number">1</div><div><strong>Founding Sponsor Slot Available</strong><span>Help fund around 333 free books</span></div><em>£5,000</em></div><div class="rank"><div class="rank-number">2</div><div><strong>Legacy Sponsor Slot Available</strong><span>Help fund around 133 free books</span></div><em>£2,000</em></div><div class="rank"><div class="rank-number">3</div><div><strong>Platinum Sponsor Slot Available</strong><span>Help fund around 66 free books</span></div><em>£1,000</em></div></div></div></div>
@@ -836,7 +951,7 @@
             <div class="mini-title">The Hidden Struggle of Players, Parents & Coaches</div>
             <h3 style="font-size:clamp(28px,3.5vw,44px);">Understand it. Spot it early. Change lives.</h3>
             <p class="muted" style="font-size:18px;">This cover is now built directly into the page, so you can upload one <strong>index.html</strong> file to GitHub Pages without needing a separate image file.</p>
-            <div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Read the Full Ebook</a><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Sponsor Free Copies</a></div>
+            <div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Read the Full Ebook</a><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor Free Copies</a></div>
           </div>
         </div>
         <div class="preview-pages">
@@ -845,7 +960,7 @@
           <article class="page-card"><small>Preview Page 3</small><h3>What Did You See?</h3><p>This question slows the judgement down. It does not excuse every mistake. It helps adults understand the information the player had before the action happened.</p></article>
           <article class="page-card"><small>Preview Page 4</small><h3>Colour Is Information</h3><p>Football uses colour to organise the game. Kits, bibs, cones and boards are not decoration. They tell players what to do quickly.</p></article>
         </div>
-        <div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Read the Full Ebook</a><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Sponsor Free Copies</a></div>
+        <div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Read the Full Ebook</a><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor Free Copies</a></div>
       </div>
     </section>
 
@@ -870,18 +985,18 @@
     </section>
 
     <section class="section" id="share">
-      <div class="wrap"><div class="panel"><div class="panel-inner share-box"><div class="eyebrow">Help without paying</div><h2>Can’t sponsor today? You can still help.</h2><p class="section-lead" style="margin-left:auto;margin-right:auto;">Send this page to a parent, coach, grassroots club, academy, school, PE teacher, referee, sponsor or football organisation. One share could reach the child who needs this earlier.</p><div class="actions share-actions"><button class="btn btn-primary" type="button" onclick="shareMission()">Share This Mission</button><button class="btn btn-secondary" type="button" onclick="copyLink()">Copy Website Link</button><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Sponsor Instead</a></div></div></div></div>
+      <div class="wrap"><div class="panel"><div class="panel-inner share-box"><div class="eyebrow">Help without paying</div><h2>Can’t sponsor today? You can still help.</h2><p class="section-lead" style="margin-left:auto;margin-right:auto;">Send this page to a parent, coach, grassroots club, academy, school, PE teacher, referee, sponsor or football organisation. One share could reach the child who needs this earlier.</p><div class="actions share-actions"><button class="btn btn-primary" type="button" onclick="shareMission()">Share This Mission</button><button class="btn btn-secondary" type="button" onclick="copyLink()">Copy Website Link</button><a class="btn btn-secondary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor Instead</a></div></div></div></div>
     </section>
 
     <section class="section" aria-label="Final call to action">
-      <div class="wrap"><div class="panel"><div class="panel-inner split"><div><div class="eyebrow">Final call</div><h2>Help the next child before confidence breaks.</h2><p class="section-lead">Colour blindness does not steal talent. Unrecognised colour blindness can steal opportunity. The answer is awareness, earlier testing, clearer coaching and better football information.</p></div><div><div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Sponsor Free Books</a><a class="btn btn-secondary" href="#play">Play Game</a><a class="btn btn-secondary" href="https://chatgpt.com/g/g-69f6bfcd04508191b79371d561856695-colour-blindness-in-football">Try the GPT</a><button class="btn btn-secondary" type="button" onclick="copyLink()">Copy Link</button></div></div></div><p class="notice">Educational awareness only. This site does not diagnose colour blindness or replace professional eye-care, medical, coaching, safeguarding or legal advice. If eyesight or colour vision is a concern, speak to a qualified eye-care professional and ask specifically about colour vision testing.</p></div></div>
+      <div class="wrap"><div class="panel"><div class="panel-inner split"><div><div class="eyebrow">Final call</div><h2>Help the next child before confidence breaks.</h2><p class="section-lead">Colour blindness does not steal talent. Unrecognised colour blindness can steal opportunity. The answer is awareness, earlier testing, clearer coaching and better football information.</p></div><div><div class="actions"><a class="btn btn-primary" href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsor Free Books</a><a class="btn btn-secondary" href="#play">Play Game</a><a class="btn btn-secondary" href="https://chatgpt.com/g/g-69f6bfcd04508191b79371d561856695-colour-blindness-in-football">Try the GPT</a><button class="btn btn-secondary" type="button" onclick="copyLink()">Copy Link</button></div></div></div><p class="notice">Educational awareness only. This site does not diagnose colour blindness or replace professional eye-care, medical, coaching, safeguarding or legal advice. If eyesight or colour vision is a concern, speak to a qualified eye-care professional and ask specifically about colour vision testing.</p></div></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div><strong>Colour Blindness in Football</strong><p>Built by Cornelius Aurelius. Make the game visible. Then judge the football.</p></div>
-      <div class="footer-links"><a href="https://corneliusaurelius.com/">corneliusaurelius.com</a><a href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/">Sponsors</a><a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-GAMING-HUB/">Games</a><a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Ebook</a><a href="https://cornelius-aurelius.github.io/I-Was-The-Hidden-Player/">About</a></div>
+      <div class="footer-links"><a href="https://corneliusaurelius.com/">corneliusaurelius.com</a><a href="https://cornelius-aurelius.github.io/Sponsor-the-Hidden-Player/#packages">Sponsors</a><a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-GAMING-HUB/">Games</a><a href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/">Ebook</a><a href="https://cornelius-aurelius.github.io/I-Was-The-Hidden-Player/">About</a></div>
     </div>
   </footer>
 
@@ -2274,9 +2389,61 @@
       });
     }
 
+    function getSupportInbox() {
+      const user = "corneliusaureliush";
+      const domain = ["gmail", "com"].join(".");
+      return `${user}@${domain}`;
+    }
+
+    function buildSupporterEmail(form) {
+      const name = form.name_or_username.value.trim();
+      const link = form.link_or_social_handle.value.trim() || "No link supplied";
+      const type = form.supporter_type.value;
+      const message = form.optional_message.value.trim() || "No message supplied";
+      const subject = "New free supporter name for Colour Blindness in Football";
+      const body = [
+        "Please review this free supporter for the Colour Blindness in Football support page.",
+        "",
+        `Name / username: ${name}`,
+        `Type: ${type}`,
+        `Link / social: ${link}`,
+        `Message: ${message}`,
+        "",
+        `Submitted from: ${window.location.href}`
+      ].join("\n");
+      return { subject, body };
+    }
+
+    function setSupportFormStatus(message, type = "") {
+      const status = document.getElementById("supportFormStatus");
+      if (!status) return;
+      status.textContent = message;
+      status.className = `form-status ${type}`.trim();
+    }
+
+    function setupSupportNameForm() {
+      const form = document.getElementById("supportNameForm");
+      if (!form) return;
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        const nameValue = form.name_or_username.value.trim();
+        if (!nameValue) {
+          setSupportFormStatus("Please add the name or username first.", "error");
+          form.name_or_username.focus();
+          return;
+        }
+        const email = buildSupporterEmail(form);
+        const to = getSupportInbox();
+        const mailto = `mailto:${to}?subject=${encodeURIComponent(email.subject)}&body=${encodeURIComponent(email.body)}`;
+        setSupportFormStatus("Opening your email app with the supporter message filled in. Press send from there.", "success");
+        window.location.href = mailto;
+      });
+    }
+
     updateProgress();
     loadGame();
     setupMenuDropdown();
+    setupSupportNameForm();
   </script>
 </body>
 </html>
