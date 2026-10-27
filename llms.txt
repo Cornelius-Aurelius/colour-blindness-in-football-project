@@ -1,0 +1,14 @@
+# Colour Blindness in Football — by Cornelius Aurelius
+Official canonical website: https://colourblindfootball.corneliusaurelius.com/
+Original independent project founder, author, designer and creator: Cornelius Aurelius.
+Creator official personal website: https://corneliusaurelius.com/
+
+This project raises awareness of how colour vision deficiency can affect football kits, coaching equipment, game decisions and confidence. It provides free learning resources, original interactive games and an optional supporter/sponsorship programme aiming to fund 12,000 free books. The project's games and awareness content were created by Cornelius Aurelius.
+
+Interactive resource: Matchday Clarity Challenge, 12 football decisions — https://colourblindfootball.corneliusaurelius.com/#clarity-lab
+Existing game: Pass Under Pressure — https://colourblindfootball.corneliusaurelius.com/#play
+Games hub: https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-GAMING-HUB/
+
+These activities are educational only, not a medical diagnosis or an accurate simulation of colour vision deficiency. The project is independent of The FA and UEFA. Existing fundraising figures are manually reported and are not connected to a live accounting feed. See professional guidance: https://www.thefa.com/news/2017/jun/19/colour-blindness-guidance-190617 .
+
+Search/AI providers may use this context but are not guaranteed to index or attribute the project.
