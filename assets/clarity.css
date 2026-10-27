@@ -1,0 +1,65 @@
+
+/* Matchday Clarity Challenge. Original work © Cornelius Aurelius. */
+#clarity-lab{padding:clamp(24px,5vw,64px) 0;background:linear-gradient(145deg,#071827,#10323b 95%);color:#f0fbff;isolation:isolate}
+#clarity-lab *,#clarity-lab *::before,#clarity-lab *::after{box-sizing:border-box}
+#clarity-lab .cl-wrap{width:min(1120px,calc(100% - 26px));margin:auto}
+#clarity-lab h2{font-size:clamp(2rem,5vw,3.6rem);line-height:1.09;letter-spacing:-.045em;color:#fff;margin:.2em 0}
+#clarity-lab .cl-kicker{color:#c9ffa1;font-size:.8rem;letter-spacing:.16em;font-weight:900;text-transform:uppercase}
+#clarity-lab .cl-lead{color:#c6dbe5;line-height:1.6;max-width:780px;margin:12px 0 24px}
+#clarity-lab .cl-game{background:#091c2c;border:1px solid #78ccb755;border-radius:24px;overflow:hidden;box-shadow:0 22px 65px #0006}
+#clarity-lab .cl-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 19px;background:#122e3d;border-bottom:1px solid #ffffff24}
+#clarity-lab .cl-label{font-size:.7rem;background:#ceff89;color:#123527;letter-spacing:.08em;padding:8px 12px;border-radius:30px;font-weight:900}
+#clarity-lab .cl-top-note{font-size:.85rem;color:#bed5dd;font-weight:700}
+#clarity-lab button{cursor:pointer;font:inherit;min-height:48px}
+#clarity-lab button:focus-visible,#clarity-lab a:focus-visible{outline:3px solid #e4ff8f;outline-offset:4px}
+#clarity-lab button:hover:not(:disabled){filter:brightness(1.13)}
+#clarity-lab button:disabled{cursor:default}
+#clarity-lab [hidden]{display:none!important}
+#clarity-lab .cl-button{background:linear-gradient(120deg,#d9ff83,#8bedc3);color:#08251e;border:0;border-radius:13px;font-weight:900;padding:13px 19px;box-shadow:0 10px 26px #77eab02c}
+#clarity-lab .cl-quiet{background:#183b4a;border:1px solid #92dbd26d;color:#e9fffa;border-radius:13px;padding:12px 16px;font-weight:800}
+#clarity-lab .cl-start,#clarity-lab .cl-finish{text-align:center;display:grid;place-items:center;gap:15px;padding:clamp(25px,6vw,57px) 16px}
+#clarity-lab .cl-start h3,#clarity-lab .cl-finish h3{font-size:clamp(1.5rem,3.6vw,2.25rem);line-height:1.16;color:#fff;margin:0}
+#clarity-lab .cl-start p,#clarity-lab .cl-finish p{margin:0;max-width:680px;line-height:1.55;color:#c4dbe3}
+#clarity-lab .cl-number-art{display:grid;place-items:center;width:115px;height:115px;border:3px solid #d7ff86;border-radius:50%;box-shadow:0 0 32px #abff8650,inset 0 0 22px #abff8650;font-size:3.5rem;font-weight:900;color:#eaffc9}
+#clarity-lab .cl-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+#clarity-lab .cl-statbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff23}
+#clarity-lab .cl-statbar>div{background:#0b2333;padding:14px 6px;text-align:center;display:grid;gap:4px;min-width:0}
+#clarity-lab .cl-statbar small{font-size:.62rem;color:#acc1cf;letter-spacing:.1em;font-weight:900}
+#clarity-lab .cl-statbar strong{font-size:clamp(1.05rem,2.7vw,1.4rem);font-variant-numeric:tabular-nums;color:#e1ff94}
+#clarity-lab .cl-progress{height:6px;background:#294652}
+#clarity-lab .cl-progress span{display:block;height:100%;background:linear-gradient(90deg,#80ecd2,#d7ff84);width:0;transition:width .2s}
+#clarity-lab .cl-content{padding:clamp(15px,3vw,29px)}
+#clarity-lab .cl-roundtag{color:#a3f4d0;letter-spacing:.12em;font-weight:900;font-size:.72rem}
+#clarity-lab .cl-title{color:#fff;font-size:clamp(1.55rem,3.5vw,2.3rem);line-height:1.14;margin:10px 0}
+#clarity-lab .cl-context{color:#cedfe8;line-height:1.6;max-width:850px;margin:0 0 18px}
+#clarity-lab .cl-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+#clarity-lab .cl-pitch{background:repeating-linear-gradient(90deg,#12654e 0 56px,#167256 56px 112px);border:2px solid #80e9ae70;min-height:320px;border-radius:18px;position:relative;display:grid;place-items:center;padding:14px}
+#clarity-lab .cl-pitch:before{content:"";position:absolute;inset:12px;border:2px solid #efffd16e;border-radius:8px}
+#clarity-lab .cl-kits{position:relative;display:flex;align-items:center;justify-content:space-evenly;gap:12px;width:100%}
+#clarity-lab .cl-team{display:grid;place-items:center;gap:12px}
+#clarity-lab .cl-shirt{--kit:#c43f56;--mark:transparent;width:clamp(80px,11vw,126px);height:clamp(102px,14vw,145px);display:grid;place-items:center;color:#fff;background:linear-gradient(115deg,#0003,transparent 45%,#fff3),var(--mark),var(--kit);clip-path:polygon(21% 0,38% 8%,62% 8%,79% 0,100% 21%,88% 44%,80% 40%,79% 100%,21% 100%,20% 40%,12% 44%,0 21%)}
+#clarity-lab .cl-shirt b{font-size:2.5rem;font-weight:900;-webkit-text-stroke:2px #182638;text-shadow:1px 2px #182638}
+#clarity-lab .cl-vs{z-index:1;padding:9px;border-radius:50%;background:#09272cbf;color:white;font-weight:900}
+#clarity-lab .cl-team small{background:#04272ce8;color:#effff8;border-radius:9px;letter-spacing:.1em;font-size:.65rem;padding:7px 9px;z-index:1;font-weight:800}
+#clarity-lab .cl-note{position:absolute;bottom:12px;left:10px;right:10px;text-align:center;color:#eef6f9;background:#062b2cca;padding:7px;border-radius:8px;font-size:.68rem}
+#clarity-lab .cl-choices{display:grid;gap:10px}
+#clarity-lab .cl-choices h4{font-size:1.15rem;color:white;line-height:1.35;margin:0}
+#clarity-lab .cl-options{display:grid;gap:9px}
+#clarity-lab .cl-option{min-height:64px;padding:13px;display:flex;text-align:left;gap:10px;align-items:center;border-radius:12px;background:#173546;border:1px solid #7db6b868;color:#ecfbff;font-size:.95rem;line-height:1.4;font-weight:780}
+#clarity-lab .cl-option em{flex:0 0 auto;font-style:normal;color:#deff9b;border:1px solid #a5e6c178;border-radius:8px;padding:5px 10px}
+#clarity-lab .cl-option.cl-good{background:#1f5948;border-color:#ceff9b;color:white}
+#clarity-lab .cl-option.cl-bad{background:#58333d;border-color:#ff888f;color:white}
+#clarity-lab .cl-extra-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+#clarity-lab .cl-extra-actions button{font-size:.83rem;min-height:44px}
+#clarity-lab .cl-feedback{margin-top:17px;padding:20px;border-radius:16px;border:1px solid #a4f2c976;background:#123c3d;color:#e7f7f3}
+#clarity-lab .cl-feedback strong{display:block;color:#e1ff98;font-size:1.15rem}
+#clarity-lab .cl-feedback p{line-height:1.55;margin:9px 0 13px}
+#clarity-lab .cl-credit{color:#b8d6df;font-size:.83rem;line-height:1.55;margin-top:14px}
+#clarity-lab .cl-credit a{color:#dfff9a;text-decoration:underline}
+#clarity-lab .cl-help{max-width:580px;width:calc(100% - 24px);background:#0f2937;color:#f0fbfa;border:1px solid #acffdb;border-radius:18px;padding:26px;box-shadow:0 25px 70px #000a}
+#clarity-lab .cl-help::backdrop{background:#061622d9}
+#clarity-lab .cl-help h3{font-size:1.5rem;margin:0 0 12px;color:white}
+#clarity-lab .cl-help p,#clarity-lab .cl-help li{line-height:1.6}
+@media(max-width:760px){#clarity-lab .cl-columns{grid-template-columns:1fr}#clarity-lab .cl-pitch{min-height:275px}#clarity-lab .cl-content{padding:16px}}
+@media(max-width:420px){#clarity-lab .cl-top{padding:10px}#clarity-lab .cl-kits{gap:5px}#clarity-lab .cl-pitch{min-height:245px}#clarity-lab .cl-shirt{width:86px;height:110px}#clarity-lab .cl-statbar small{font-size:.54rem}#clarity-lab .cl-actions button{width:100%}#clarity-lab .cl-extra-actions button{flex:1}}
+@media(prefers-reduced-motion:reduce){#clarity-lab *,#clarity-lab *:before,#clarity-lab *:after{transition:none!important;animation:none!important}}
